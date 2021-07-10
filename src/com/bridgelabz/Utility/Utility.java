@@ -69,4 +69,23 @@ public class Utility {
 		}
 		scanner.close();
 		}
+	
+	public static void findTriplet(int number, int[] array) {
+		// System.out.println("hi..");
+		boolean found = false;
+
+		for (int i = 0; i < number - 2; i++) {
+			for (int j = i + 1; j < number - 1; j++) {
+				for (int k = j + 1; k < number; k++) {
+					if (array[i] + array[j] + array[k] == 0) {
+						System.out.println("Triplets are :" + array[i] + " " + array[j] + " " + array[k]);
+						found = true;
+					}
+				}
+			}
+		}
+		if (found == false)
+			System.out.println("Triplets not Exist...");
+	}
+		
 }
